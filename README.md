@@ -60,6 +60,16 @@ npm run preview
 
 Review the files before pushing. The `.gitignore` excludes dependencies, build output, and environment files.
 
+## Deploy with GitHub Pages
+
+Every push to the `main` branch builds the website and publishes it with GitHub Actions. After the first successful deployment, visit:
+
+<https://surajk79166-droid.github.io/suraj-s/>
+
+If GitHub Pages is not enabled for the repository yet, open **Settings → Pages**, choose **GitHub Actions** under **Build and deployment**, and save. Then check the **Actions** tab for the deployment status.
+
+The Vite base path in `vite.config.js` is set for this repository name (`suraj-s`). If you rename the repository, update that path to match.
+
 ## Deploy with Vercel
 
 Import the GitHub repository in Vercel and use the default Vite settings:
@@ -67,4 +77,4 @@ Import the GitHub repository in Vercel and use the default Vite settings:
 - Build command: `npm run build`
 - Output directory: `dist`
 
-No deployment or repository is configured by this project.
+For Vercel, change the Vite `base` in `vite.config.js` to `/` before deploying.
